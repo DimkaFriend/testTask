@@ -1,0 +1,30 @@
+<mvc:View
+	controllerName="sap.ui.demo.walkthrough.controller.Detail"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		title="Детали"
+		showNavButton="true"
+		navButtonPress="onNavBack">
+		<Panel>
+			<Image src="https://avatars.steamstatic.com/54e945407d138150d408448d76ef84ba8c0509b5_full.jpg" 
+			class="image"
+			height="115px"></Image>
+		<ObjectHeader
+			
+			title="{company>company/name}" class="sidebar">
+			<attributes>
+				<ObjectAttribute text="{company>company/manufacturer}" />
+				<ObjectAttribute text="Цена: {company>company/price} руб." />
+				<ObjectAttribute text="Калорийность: {company>company/calories} калл." />
+			</attributes>
+			</ObjectHeader>
+		</Panel>
+		<ObjectHeader
+			title="Описание">
+			<attributes>
+				<ObjectAttribute text="{company>company/description}" />
+			</attributes>
+		</ObjectHeader>
+	</Page>
+</mvc:View>

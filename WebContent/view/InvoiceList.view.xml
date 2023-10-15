@@ -1,0 +1,63 @@
+<mvc:View
+   controllerName="sap.ui.demo.walkthrough.controller.InvoiceList"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+			<ObjectHeader
+				id="agrigation"
+				icon="sap-icon://hello-world"
+				title="Показатели"
+				number="{
+					parts:[{path:'agrigation>/count'}],
+					type: 'sap.ui.model.type.Currency',
+					formatOptions: {showMeasure: false}
+				}"
+				numberUnit ="{view1>/measurement}" >
+				<ObjectAttribute text="Сумма : {agrigation>/summ}" />
+				<ObjectAttribute text="Среднее : {agrigation>/avg}" />
+			</ObjectHeader>
+			
+<Table id="table" items="{company>/Companys}" >
+    <columns>
+      <Column
+        width="12em">
+        <Text text="Шоколадки" />
+      </Column>
+       <Column
+        minScreenWidth="Tablet"
+        demandPopin="true">
+        <Text text="Производитель" />
+      </Column>
+       <Column
+        minScreenWidth="Tablet"
+        demandPopin="true">
+        <Text text="Цена" />
+      </Column>
+    </columns>
+
+
+<items>
+      <ColumnListItem type="Navigation" press="onPress">
+        <cells>
+          <ObjectIdentifier
+            title="{company>company/name}"
+            text=""
+            class="sapMTableContentMargin" />
+          <Text
+            text="{company>company/manufacturer}" />
+          <ObjectNumber
+           class = "currency"
+            number="{
+			parts: [{path: 'company>company/price'}],
+			type: 'sap.ui.model.type.Currency',
+			formatOptions: {
+				showMeasure: true
+			}
+		}"
+		 unit="{view>/currency}"
+		 
+		/>
+        </cells>
+      </ColumnListItem>
+    </items>
+  </Table>
+</mvc:View>

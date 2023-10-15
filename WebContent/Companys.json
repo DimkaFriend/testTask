@@ -1,0 +1,31 @@
+{
+	"Companys":[
+		{
+			"company" : {
+				"name": "Марс",
+				"manufacturer": "Комппания 1",
+				"price": 100.00,
+				"calories": 454,
+				"description": "Куча нуги и арахиса, ням ням"
+			}
+		},
+		{
+			"company" : {
+				"name": "Сникерс",
+				"manufacturer": "Комппания 2",
+				"price":150.00,
+				"calories": 250,
+				"description": "Куча карамели, шоколада и арахиса, ням ням"
+			}
+		},
+		{
+			"company" : {
+				"name": "Баунти",
+				"manufacturer": "Комппания 3",
+				"price": 240.00,
+				"calories": 139,
+				"description": "Ахрененно много кокосов"
+			}
+		}
+	]
+}
